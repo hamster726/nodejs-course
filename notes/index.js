@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     })
 
     if (req.url === '/') {
-      fs.readFile(path.join(__dirname, 'views', 'index.html'),
+      fs.readFile(path.join(__dirname, 'views', 'index.hbs'),
         'utf-8',
         (err, content) => {
           if (err) {
@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
         }
       )
     } else if (req.url === '/about') {
-      fs.readFile(path.join(__dirname, 'views', 'about.html'),
+      fs.readFile(path.join(__dirname, 'views', 'about.hbs'),
         'utf-8',
         (err, content) => {
           if (err) throw err;
